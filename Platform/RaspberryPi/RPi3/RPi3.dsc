@@ -38,6 +38,10 @@
   DEFINE SECURE_BOOT_ENABLE      = FALSE
   DEFINE DEBUG_PRINT_ERROR_LEVEL = 0x8000004F
 
+!ifndef TFA_BUILD_DIR
+  DEFINE TFA_BUILD_DIR = Platform/RaspberryPi/$(PLATFORM_NAME)/TrustedFirmware
+!endif
+
 ################################################################################
 #
 # Library Class section - list of all Library Classes needed by this Platform.
