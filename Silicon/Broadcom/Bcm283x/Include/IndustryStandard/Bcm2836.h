@@ -13,7 +13,7 @@
 /*
  * Both "core" and SoC perpherals (1M each).
  */
-#define BCM2836_SOC_REGISTERS                               0x3f000000
+#define BCM2836_SOC_REGISTERS                               0xfe000000
 #define BCM2836_SOC_REGISTER_LENGTH                         0x02000000
 
 /*
@@ -22,7 +22,7 @@
 #define BCM2836_DMA_DEVICE_OFFSET                           0xc0000000
 
 /* watchdog constants */
-#define BCM2836_WDOG_BASE_ADDRESS                           0x3f100000
+#define BCM2836_WDOG_BASE_ADDRESS                           0xfe100000
 #define BCM2836_WDOG_PASSWORD                               0x5a000000
 #define BCM2836_WDOG_RSTC_OFFSET                            0x0000001c
 #define BCM2836_WDOG_WDOG_OFFSET                            0x00000024
@@ -30,7 +30,7 @@
 #define BCM2836_WDOG_RSTC_WRCFG_FULL_RESET                  0x00000020
 
 /* mailbox interface constants */
-#define BCM2836_MBOX_BASE_ADDRESS                           0x3f00b880
+#define BCM2836_MBOX_BASE_ADDRESS                           0xfe00b880
 #define BCM2836_MBOX_READ_OFFSET                            0x00000000
 #define BCM2836_MBOX_STATUS_OFFSET                          0x00000018
 #define BCM2836_MBOX_CONFIG_OFFSET                          0x0000001c

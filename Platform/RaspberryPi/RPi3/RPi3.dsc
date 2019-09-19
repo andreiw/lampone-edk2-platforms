@@ -322,7 +322,7 @@
   gEfiSecurityPkgTokenSpaceGuid.PcdRemovableMediaImageVerificationPolicy|0x04
 !endif
 
-  gEmbeddedTokenSpaceGuid.PcdInterruptBaseAddress|0x40000000
+  gEmbeddedTokenSpaceGuid.PcdInterruptBaseAddress|0xff800000
   gArmTokenSpaceGuid.PcdArmArchTimerSecIntrNum|0x0
   gArmTokenSpaceGuid.PcdArmArchTimerIntrNum|0x1
   gArmTokenSpaceGuid.PcdArmArchTimerVirtIntrNum|0x2
@@ -372,7 +372,7 @@
   gArmTokenSpaceGuid.PcdSystemMemorySize|0x3FC00000
 
   ## NS16550 compatible UART
-  gEfiMdeModulePkgTokenSpaceGuid.PcdSerialRegisterBase|0x3f215040
+  gEfiMdeModulePkgTokenSpaceGuid.PcdSerialRegisterBase|0xfe215040
   gEfiMdeModulePkgTokenSpaceGuid.PcdSerialUseMmio|TRUE
   gEfiMdeModulePkgTokenSpaceGuid.PcdSerialRegisterStride|4
   gEfiMdeModulePkgTokenSpaceGuid.PcdSerialClockRate|500000000
@@ -387,7 +387,7 @@
   gEfiMdeModulePkgTokenSpaceGuid.PcdResetOnMemoryTypeInformationChange|FALSE
   gEfiMdeModulePkgTokenSpaceGuid.PcdBootManagerMenuFile|{ 0x21, 0xaa, 0x2c, 0x46, 0x14, 0x76, 0x03, 0x45, 0x83, 0x6e, 0x8a, 0xb6, 0xf4, 0x66, 0x23, 0x31 }
 
-  gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVendor|L"Raspberry Pi 3 64-bit UEFI"
+  gEfiMdeModulePkgTokenSpaceGuid.PcdFirmwareVendor|L"Raspberry Pi 4 64-bit UEFI"
   gEfiMdeModulePkgTokenSpaceGuid.PcdSetNxForStack|TRUE
 
 [PcdsDynamicHii.common.DEFAULT]
