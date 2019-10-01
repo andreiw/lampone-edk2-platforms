@@ -144,6 +144,8 @@ MemoryPeim (
 
   AddReservedMemoryRegion (&MemoryTable[4]);
 
+  AddReservedMemoryRegion (&MemoryTable[5]);
+
   // Build Memory Allocation Hob
   InitMmu (MemoryTable);
 
