@@ -64,7 +64,7 @@ Device (URTM)
     Name (RBUF, ResourceTemplate ()
     {
       MEMORY32FIXED (ReadWrite, 0xfe215000, 0x70,)
-      Interrupt(ResourceConsumer, Level, ActiveHigh, Shared) {0x3D}
+      Interrupt(ResourceConsumer, Level, ActiveHigh, Shared) {125}
 
       // NTRAID#MSFT-7141401-2016/04/7-jordanrh - disable UART muxing
       // until a proper solution can be created for the dmap conflict.

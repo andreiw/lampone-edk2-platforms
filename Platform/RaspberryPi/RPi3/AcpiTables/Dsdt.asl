@@ -79,7 +79,7 @@ DefinitionBlock ("Dsdt.aml", "DSDT", 5, "MSFT", "EDK2", 2)
         Name (RBUF, ResourceTemplate ()
         {
           MEMORY32FIXED(ReadWrite, 0xfe980000, 0x10000,)
-          Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive) { 0x29 }
+          Interrupt(ResourceConsumer, Level, ActiveHigh, Exclusive) { 105 }
         })
         Return(RBUF)
       }

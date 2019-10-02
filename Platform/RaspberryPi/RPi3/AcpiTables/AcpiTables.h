@@ -15,12 +15,27 @@
 #include <IndustryStandard/Acpi50.h>
 
 #define EFI_ACPI_OEM_ID                       {'M','C','R','S','F','T'} // OEMID 6 bytes long
-#define EFI_ACPI_OEM_TABLE_ID                 SIGNATURE_64 ('R','P','I','3','E','D','K','2') // OEM table id 8 bytes long
+#define EFI_ACPI_OEM_TABLE_ID                 SIGNATURE_64 ('R','P','I','4','E','D','K','2') // OEM table id 8 bytes long
 #define EFI_ACPI_OEM_REVISION                 0x02000820
-#define EFI_ACPI_CREATOR_ID                   SIGNATURE_32 ('R','P','I','3')
+#define EFI_ACPI_CREATOR_ID                   SIGNATURE_32 ('R','P','I','4')
 #define EFI_ACPI_CREATOR_REVISION             0x00000097
 
 #define EFI_ACPI_VENDOR_ID                    SIGNATURE_32 ('M','S','F','T')
+
+// A macro to initialise the common header part of EFI ACPI tables as defined by
+// EFI_ACPI_DESCRIPTION_HEADER structure.
+#define ACPI_HEADER(Signature, Type, Revision) {                  \
+    Signature,                      /* UINT32  Signature */       \
+    sizeof (Type),                  /* UINT32  Length */          \
+    Revision,                       /* UINT8   Revision */        \
+    0,                              /* UINT8   Checksum */        \
+    EFI_ACPI_OEM_ID,                /* UINT8   OemId[6] */            \
+    EFI_ACPI_OEM_TABLE_ID,      /* UINT64  OemTableId */          \
+    EFI_ACPI_OEM_REVISION,      /* UINT32  OemRevision */         \
+    EFI_ACPI_CREATOR_ID,        /* UINT32  CreatorId */           \
+    EFI_ACPI_CREATOR_REVISION   /* UINT32  CreatorRevision */     \
+  }
+
 #define EFI_ACPI_CSRT_REVISION                0x00000005
 #define EFI_ACPI_CSRT_DEVICE_ID_DMA           0x00000009 // Fixed id
 #define EFI_ACPI_CSRT_RESOURCE_ID_IN_DMA_GRP  0x0 // Count up from 0
