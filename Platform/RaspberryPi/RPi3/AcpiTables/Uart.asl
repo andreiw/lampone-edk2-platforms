@@ -24,7 +24,7 @@ Device (URT0)
   {
     Name (RBUF, ResourceTemplate ()
     {
-      MEMORY32FIXED (ReadWrite, 0x3F201000, 0x1000,)
+      MEMORY32FIXED (ReadWrite, 0xfe201000, 0x1000,)
       Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive) { 0x59 }
     })
     Return (RBUF)
@@ -63,7 +63,7 @@ Device (URTM)
   {
     Name (RBUF, ResourceTemplate ()
     {
-      MEMORY32FIXED (ReadWrite, 0x3F215000, 0x70,)
+      MEMORY32FIXED (ReadWrite, 0xfe215000, 0x70,)
       Interrupt(ResourceConsumer, Level, ActiveHigh, Shared) {0x3D}
 
       // NTRAID#MSFT-7141401-2016/04/7-jordanrh - disable UART muxing
