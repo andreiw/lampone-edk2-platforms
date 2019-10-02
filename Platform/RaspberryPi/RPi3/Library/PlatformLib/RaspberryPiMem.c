@@ -63,11 +63,18 @@ STATIC ARM_MEMORY_REGION_DESCRIPTOR RaspberryPiMemoryRegionDescriptor[] = {
     /* 5 - More RAM. */
     0x40000000,
     0x40000000,
-    BCM2836_SOC_REGISTERS - 0x40000000,
+    0xfc000000 - 0x40000000,
     ARM_MEMORY_REGION_ATTRIBUTE_WRITE_BACK
   },
   {
-    /* 6 - SOC registers. */
+    /* 6 - New SOC registers (PCIe, genet, ...) */
+    0xfc000000,
+    0xfc000000,
+    0x2000000,
+    ARM_MEMORY_REGION_ATTRIBUTE_DEVICE
+  },
+  {
+    /* 7 - SOC registers. */
     BCM2836_SOC_REGISTERS,
     BCM2836_SOC_REGISTERS,
     BCM2836_SOC_REGISTER_LENGTH,
@@ -164,6 +171,14 @@ ArmPlatformGetVirtualMemoryMap (
     RaspberryPiMemoryRegionDescriptor[6].PhysicalBase,
     RaspberryPiMemoryRegionDescriptor[6].VirtualBase,
     RaspberryPiMemoryRegionDescriptor[6].Length));
+
+  DEBUG ((DEBUG_INFO, "More SoC reserved:\n"
+    "\tPhysicalBase: 0x%lX\n"
+    "\tVirtualBase: 0x%lX\n"
+    "\tLength: 0x%lX\n",
+    RaspberryPiMemoryRegionDescriptor[7].PhysicalBase,
+    RaspberryPiMemoryRegionDescriptor[7].VirtualBase,
+    RaspberryPiMemoryRegionDescriptor[7].Length));
 
   *VirtualMemoryMap = RaspberryPiMemoryRegionDescriptor;
 }
