@@ -212,7 +212,7 @@ READ_LOCK_STATUS   = TRUE
   INF Platform/RaspberryPi/$(PLATFORM_NAME)/Drivers/DisplayDxe/DisplayDxe.inf
 
   INF UefiCpuPkg/CpuIo2Dxe/CpuIo2Dxe.inf
-  INF Silicon/Broadcom/Bcm283x/Drivers/InterruptDxe/InterruptDxe.inf
+  INF ArmPkg/Drivers/ArmGic/ArmGicDxe.inf
   INF Platform/RaspberryPi/$(PLATFORM_NAME)/Drivers/RpiFirmwareDxe/RpiFirmwareDxe.inf
   INF Platform/RaspberryPi/$(PLATFORM_NAME)/Drivers/FdtDxe/FdtDxe.inf
   INF Platform/RaspberryPi/$(PLATFORM_NAME)/Drivers/ConfigDxe/ConfigDxe.inf
